@@ -1,0 +1,31 @@
+﻿@using ZayShopMVC.Areas.Admin.Models.Slider
+@model SliderCommandVM
+
+<form asp-controller="Slider" asp-action="Update" method="post" class="p-4">
+    <div class="mb-3">
+        <label asp-for="Title" class="form-label">Title</label>
+        <input type="text" class="form-control" asp-for="Title" placeholder="Slider Title">
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Subtitle" class="form-label">Subtitle</label>
+        <input type="text" class="form-control" asp-for="Subtitle" placeholder="Slider Subtitle">
+        <span asp-validation-for="Subtitle" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label">Description</label>
+        <textarea type="text" class="form-control" asp-for="Description" placeholder="Slider description"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ImageUrl" class="form-label">Image url</label>
+        <input type="text" class="form-control" asp-for="ImageUrl" placeholder="Slider image">
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="SortOrder" class="form-label">Sort order</label>
+        <input type="number" class="form-control" asp-for="SortOrder" placeholder="Slider order" min="1">
+        <span asp-validation-for="SortOrder" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
